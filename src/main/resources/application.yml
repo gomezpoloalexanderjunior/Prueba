@@ -1,0 +1,15 @@
+ # SQL SERVER
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://ec2-107-21-120-104.compute-1.amazonaws.com:5432;databasename=d7ser4b7gsr2kn
+    username: vdukigjkuxswsg
+    password: df0e49c7fa75f9fb92fc23f3bbc0b770decf6c091bd2f0e34c616249958312df
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  
+server:
+  port: 8081

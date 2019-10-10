@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	
+	<header th:replace="layout/layout :: header"></header>
+
+    <div class="Container">
+    
+     <div >
+     <h2>lista de Countries</h2>
+     <Table class="table">
+	     <thead>
+		     <tr>
+			     <th scope="col">ID</th>
+			      <th scope="col">Country Name</th>
+			      <th scope="col">Location</th>
+		     </tr> 
+		     </thead>
+	      <tbody th:each="Countries: ${Countries}">
+			<tr>
+	             <th scope="row" th:text="${Countries.country_Id}">1</th>
+			      <td th:Text="${Countries.country_name}">Peru</td>
+			     <td th:Text="${Countries.region.region_name}">region</td>
+			 </tr>
+			 
+	      </tbody>
+      </Table>
+     </div>
+    </div>
+</body>
+</html>
